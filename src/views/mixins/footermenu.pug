@@ -1,0 +1,6 @@
+mixin footermenu(item, submenus)
+  li.footermenu__item= item
+    ul.foottersubmenu 
+      each submenu in submenus 
+        li.footersubmenu__item 
+          a.footersubmenu__link(href="http://#")= submenu

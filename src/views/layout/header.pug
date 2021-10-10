@@ -1,0 +1,11 @@
+- const menuItems = ["how we work", "blog", "account", "view plans"]
+include ../mixins/menuitem
+
+header.header 
+  img(src="assets/images/logo.svg", alt="Insure logo")
+  nav.navbar
+    button.togglemenu(type="button" aria-label="Toggle menu button")
+      img.togglemenu__img(src="assets/images/icon-hamburger.svg" alt="")
+    ul.menu
+      each item in menuItems
+        +menuitem(item)
