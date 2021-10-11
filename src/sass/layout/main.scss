@@ -1,0 +1,132 @@
+@use "../components/buttonlink";
+
+.article {
+  position: relative;
+  padding-top: 0.01px;
+  padding-bottom: 3.4rem;
+  margin-bottom: clamp(2rem, 10vw, 3.2rem);
+  z-index: -1;
+
+  text-align: center;
+
+  &__title {
+    margin-top: 6rem;
+    margin-bottom: 1rem;
+    margin-inline: auto;
+
+    font-family: "DM Serif Display", serif;
+    font-weight: 400;
+    font-size: clamp(2rem, 12.2vw, 4.2rem);
+    line-height: 1;
+  }
+
+  &__paragraph {
+    margin-top: 0;
+    margin-bottom: 1.8rem;
+    margin-inline: auto;
+    width: 86%;
+    max-width: 600px;
+
+    line-height: 1.8;
+  }
+
+  &__link {
+    @include buttonlink.buttonlink;
+  }
+
+  &__img-intro {
+    display: block;
+    width: 100%;
+  }
+
+  &__bg-left,
+  &__bg-right {
+    position: absolute;
+  }
+
+  &__bg-left {
+    left: 0;
+    top: 120.3vw;
+    width: 160px;
+  }
+
+  &__bg-right {
+    right: 0;
+    bottom: -178px;
+    width: 124px;
+  }
+}
+
+.sections-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: 4rem;
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 3.2rem;
+
+  &__subtitle {
+    margin-top: 2.25rem;
+    margin-bottom: 1rem;
+
+    font-family: "DM Serif Display", serif;
+    font-weight: 400;
+    font-size: 1.8rem;
+  }
+
+  &__paragraph {
+    //margin-inline: auto;
+    margin: 0;
+    width: 86%;
+    max-width: 600px;
+
+    line-height: 1.7;
+
+    color: var(--Dark-Grayish-Violet);
+  }
+}
+
+.about {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  width: 86%;
+  max-width: 600px;
+  margin-inline: auto;
+  margin-bottom: 9rem;
+  padding-block: 4.7rem;
+
+  text-align: center;
+
+  background-image: url("../assets/images/bg-pattern-how-we-work-mobile.svg");
+  background-repeat: no-repeat;
+  background-position: top right;
+
+  &__paragraph {
+    margin: 0;
+
+    font-family: "DM Serif Display", serif;
+    font-size: clamp(2rem, 11vw, 3.3rem);
+    font-weight: 400;
+
+    line-height: 1;
+  }
+
+  &__link {
+    @include buttonlink.buttonlink;
+    margin-bottom: 0;
+  }
+}
+
+.big-margin {
+  margin-bottom: clamp(10rem, 49vw, 23.2rem);
+}

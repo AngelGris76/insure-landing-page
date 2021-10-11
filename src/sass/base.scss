@@ -1,0 +1,54 @@
+// fuentes para utilizar
+
+/* font-family: 'DM Serif Display', serif;
+font-family: 'Karla', sans-serif; */
+
+:root {
+  // Primary
+
+  --Dark-Violet: hsl(256, 26%, 20%);
+  --Grayish-Blue: hsl(216, 30%, 68%);
+
+  // Neutral
+
+  --Very-Dark-Violet: hsl(270, 9%, 17%);
+  --Dark-Grayish-Violet: hsl(273, 4%, 51%);
+  --Very-Light-Gray: hsl(0, 0%, 98%);
+  --font-size: 100%;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+.reset-list {
+  margin: 0;
+  padding-left: 0%;
+  list-style: none;
+}
+
+.body {
+  min-height: 100vh;
+
+  font-family: "Karla", sans-serif;
+}
+
+.text--light {
+  color: var(--Very-Light-Gray);
+  background-color: var(--Dark-Violet);
+}
+
+.menu__link,
+.article__link,
+.about__link,
+.sociallist__link,
+.footersubmenu__link {
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.menu--active {
+  overflow: hidden;
+}

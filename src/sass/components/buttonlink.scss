@@ -1,0 +1,12 @@
+@mixin buttonlink() {
+  display: inline-block;
+  padding: 0.7em 1.6em;
+  margin-bottom: 2rem;
+
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+
+  border: 2px solid white;
+  color: inherit;
+}

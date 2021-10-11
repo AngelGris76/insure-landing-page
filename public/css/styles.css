@@ -1,0 +1,296 @@
+/* font-family: 'DM Serif Display', serif;
+font-family: 'Karla', sans-serif; */
+:root {
+  --Dark-Violet: hsl(256, 26%, 20%);
+  --Grayish-Blue: hsl(216, 30%, 68%);
+  --Very-Dark-Violet: hsl(270, 9%, 17%);
+  --Dark-Grayish-Violet: hsl(273, 4%, 51%);
+  --Very-Light-Gray: hsl(0, 0%, 98%);
+  --font-size: 100%;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+.reset-list {
+  margin: 0;
+  padding-left: 0%;
+  list-style: none;
+}
+
+.body {
+  min-height: 100vh;
+  font-family: "Karla", sans-serif;
+}
+
+.text--light {
+  color: var(--Very-Light-Gray);
+  background-color: var(--Dark-Violet);
+}
+
+.menu__link,
+.article__link,
+.about__link,
+.sociallist__link,
+.footersubmenu__link {
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.menu--active {
+  overflow: hidden;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 86%;
+  max-width: 1080px;
+  margin-left: auto;
+  margin-right: auto;
+  min-height: 80px;
+}
+
+.menu {
+  position: absolute;
+  left: 0;
+  top: 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 0.7rem;
+  width: 100%;
+  height: calc(100vh - 80px);
+  padding-top: 2.1rem;
+  background-color: var(--Very-Dark-Violet);
+  background-image: url("../assets/images/bg-pattern-mobile-nav.svg");
+  background-repeat: no-repeat;
+  background-position: left bottom;
+  background-size: contain;
+  color: white;
+  transition: transform 0.5s;
+}
+.menu__link {
+  display: inline-block;
+  padding-block: 0.9em;
+  padding-inline: min(5em, 23vw);
+  font-size: 1.15rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: inherit;
+}
+.menu__item:last-child {
+  outline: 1px solid currentColor;
+}
+
+.translate-menu {
+  transform: translateX(100vw);
+}
+
+.hide-menu {
+  display: none;
+}
+
+.togglemenu {
+  margin: 0;
+  padding: 0;
+  background-color: transparent;
+  border: none;
+  outline: none;
+}
+
+.article {
+  position: relative;
+  padding-top: 0.01px;
+  padding-bottom: 3.4rem;
+  margin-bottom: clamp(2rem, 10vw, 3.2rem);
+  z-index: -1;
+  text-align: center;
+}
+.article__title {
+  margin-top: 6rem;
+  margin-bottom: 1rem;
+  margin-inline: auto;
+  font-family: "DM Serif Display", serif;
+  font-weight: 400;
+  font-size: clamp(2rem, 12.2vw, 4.2rem);
+  line-height: 1;
+}
+.article__paragraph {
+  margin-top: 0;
+  margin-bottom: 1.8rem;
+  margin-inline: auto;
+  width: 86%;
+  max-width: 600px;
+  line-height: 1.8;
+}
+.article__link {
+  display: inline-block;
+  padding: 0.7em 1.6em;
+  margin-bottom: 2rem;
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  border: 2px solid white;
+  color: inherit;
+}
+.article__img-intro {
+  display: block;
+  width: 100%;
+}
+.article__bg-left, .article__bg-right {
+  position: absolute;
+}
+.article__bg-left {
+  left: 0;
+  top: 120.3vw;
+  width: 160px;
+}
+.article__bg-right {
+  right: 0;
+  bottom: -178px;
+  width: 124px;
+}
+
+.sections-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: 4rem;
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 3.2rem;
+}
+.section__subtitle {
+  margin-top: 2.25rem;
+  margin-bottom: 1rem;
+  font-family: "DM Serif Display", serif;
+  font-weight: 400;
+  font-size: 1.8rem;
+}
+.section__paragraph {
+  margin: 0;
+  width: 86%;
+  max-width: 600px;
+  line-height: 1.7;
+  color: var(--Dark-Grayish-Violet);
+}
+
+.about {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  width: 86%;
+  max-width: 600px;
+  margin-inline: auto;
+  margin-bottom: 9rem;
+  padding-block: 4.7rem;
+  text-align: center;
+  background-image: url("../assets/images/bg-pattern-how-we-work-mobile.svg");
+  background-repeat: no-repeat;
+  background-position: top right;
+}
+.about__paragraph {
+  margin: 0;
+  font-family: "DM Serif Display", serif;
+  font-size: clamp(2rem, 11vw, 3.3rem);
+  font-weight: 400;
+  line-height: 1;
+}
+.about__link {
+  display: inline-block;
+  padding: 0.7em 1.6em;
+  margin-bottom: 2rem;
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  border: 2px solid white;
+  color: inherit;
+  margin-bottom: 0;
+}
+
+.big-margin {
+  margin-bottom: clamp(10rem, 49vw, 23.2rem);
+}
+
+.footer {
+  padding-block: 5.4rem;
+  background-color: var(--Very-Light-Gray);
+  background-image: url("../assets/images/bg-pattern-footer-mobile.svg");
+  background-repeat: no-repeat;
+  background-position: top left;
+  background-size: contain;
+}
+.footer__socialnav {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  width: 86%;
+  margin-inline: auto;
+  max-width: 1100px;
+  padding-bottom: 2.3rem;
+  margin-bottom: 2.3rem;
+}
+.footer__socialnav::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 0;
+  bottom: 0;
+  border-bottom: 1px solid var(--Dark-Grayish-Violet);
+}
+.footer__nav {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.sociallist {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.footermenu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.footermenu__item {
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  font-weight: 700;
+  color: var(--Dark-Grayish-Violet);
+}
+
+.footersubmenu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 2.25rem;
+  margin-bottom: 2.25rem;
+}
+.footersubmenu__link {
+  color: var(--Very-Dark-Violet);
+}
