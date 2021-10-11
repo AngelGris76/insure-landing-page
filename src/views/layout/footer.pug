@@ -2,16 +2,16 @@ include ../mixins/socialitem
 include ../mixins/footermenu
 
 footer.footer 
-  img.footer__logo(src="assets/images/logo.svg", alt="insure logo")
-  nav.footer__sociallist
-    ul.sociallist
+  nav.footer__socialnav
+    img.footer__logo(src="assets/images/logo.svg", alt="insure logo")
+    ul.sociallist.reset-list
       +socialitem("facebook")
       +socialitem("twitter")
       +socialitem("pinterest")
       +socialitem("instagram")
-  nav.footernav 
-    ul.footermenu
+  nav.footer__nav 
+    ul.footermenu.reset-list
       +footermenu("our company", ["how we work","why insure?","view plans","reviews"])
       +footermenu("help me", ["faq","terms of use","privacy policy","cookies"])
-      +footermenu("contac", ["sales","support","live chat"])
-      +footermenu("other", ["careers","press","licenses"])
+      +footermenu("contact", ["sales","support","live chat"])
+      +footermenu("others", ["careers","press","licenses"])

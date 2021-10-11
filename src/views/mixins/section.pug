@@ -1,4 +1,5 @@
 mixin section(section)
-  img(src=`assets/images/icon-${section.icon}.svg`, alt="")
-  h3.article__subtitle= section.subtitle 
-  p.article__paragraph=section.paragraph
+  section.section
+    img.section__img(src=`assets/images/icon-${section.icon}.svg`, alt="")
+    h3.section__subtitle= section.subtitle 
+    p.section__paragraph=section.paragraph

@@ -6,6 +6,6 @@ header.header
   nav.navbar
     button.togglemenu(type="button" aria-label="Toggle menu button")
       img.togglemenu__img(src="assets/images/icon-hamburger.svg" alt="")
-    ul.menu
+    ul.menu.reset-list.translate-menu.hide-menu
       each item in menuItems
         +menuitem(item)
