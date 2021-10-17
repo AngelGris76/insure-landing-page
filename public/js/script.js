@@ -4,7 +4,7 @@ const menu = document.querySelector(".menu");
 
 const toggleButtonMenuIcon = () => {
   let icon;
-  if (buttonMenu.ariaChecked === "true") {
+  if (buttonMenu.ariaPressed === "true") {
     icon = "../assets/images/icon-close.svg";
   } else {
     icon = "../assets/images/icon-hamburger.svg";
@@ -13,7 +13,7 @@ const toggleButtonMenuIcon = () => {
 };
 
 buttonMenu.addEventListener("click", () => {
-  if (buttonMenu.ariaChecked === "true") {
+  if (buttonMenu.ariaPressed === "true") {
     menu.classList.add("translate-menu");
   } else {
     menu.classList.remove("hide-menu");
@@ -24,13 +24,13 @@ buttonMenu.addEventListener("click", () => {
 });
 
 menu.addEventListener("transitionend", () => {
-  if (buttonMenu.ariaChecked === "true") {
+  if (buttonMenu.ariaPressed === "true") {
     menu.classList.add("hide-menu");
     body.classList.remove("menu--active");
-    buttonMenu.ariaChecked = "false";
+    buttonMenu.ariaPressed = "false";
   } else {
     body.classList.add("menu--active");
-    buttonMenu.ariaChecked = "true";
+    buttonMenu.ariaPressed = "true";
   }
   toggleButtonMenuIcon();
 });
